@@ -1,0 +1,143 @@
+.section-seller {
+  padding-block: 160px;
+
+  @include responsive(lg) {
+    padding-block: 60px;
+  }
+
+  .container {
+    &-seller {
+      justify-content: space-between;
+
+      @include responsive(lg) {
+        @include flex(column, flex-start);
+        gap: 40px;
+      }
+
+      .content {
+        &-left {
+          @include flex(column, flex-start, space-between);
+
+          @include responsive(lg) {
+            gap: 32px;
+          }
+
+          @include responsive(sm) {
+            gap: 16px;
+          }
+
+          .subtext {
+            &-text {
+              &-display {
+                color: $white;
+                max-width: 499px;
+
+                span {
+                  max-width: 32px;
+                  display: inline-flex;
+
+                  @include responsive(xl) {
+                    max-width: 24px;
+                  }
+                }
+              }
+
+              .pagination {
+                &-wrap {
+                  @include flex(row, center, space-between);
+                  gap: 16px;
+
+                  .title {
+                    &-md {
+                      color: $white;
+                      font-family: $font-display;
+                      font-size: 24px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: 130%;
+                      /* 31.2px */
+                      text-transform: uppercase;
+
+                      @include responsive(sm) {
+                        font-size: 20px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &:nth-child(2) {
+                @include flex(row, center, null);
+                gap: 40px;
+
+                @include responsive(sm) {
+                  gap: 16px;
+                }
+              }
+
+              .line {
+                content: "";
+                width: 125px;
+                height: 3px;
+                background-color: $white;
+              }
+
+              .title-lg {
+                color: $primary !important;
+                font-size: 32px !important;
+
+                @include responsive(sm) {
+                  font-size: 24px !important;
+                }
+              }
+            }
+          }
+        }
+
+        &-right {
+          @include flex(column, flex-start, space-between);
+          gap: 80px;
+
+          @include responsive(xl) {
+            gap: 40px;
+          }
+
+          .item {
+            @include flex(row, center, null);
+            gap: 72px;
+            transition: all 300ms ease;
+            cursor: pointer;
+
+            @include responsive(xl) {
+              gap: 32px;
+            }
+
+            @include responsive(sm) {
+              flex-direction: column;
+              gap: 24px;
+              width: 100%;
+            }
+
+            img {
+              max-width: 132px;
+            }
+
+            &-title {
+              max-width: 486px;
+
+              @include responsive(sm) {
+                text-align: center;
+              }
+            }
+
+            &:hover {
+              .item-title {
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

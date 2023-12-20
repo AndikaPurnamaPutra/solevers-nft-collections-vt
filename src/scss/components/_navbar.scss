@@ -1,0 +1,134 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: $black;
+
+  .container {
+    &-nav {
+      @include flex(row, center, space-between);
+      padding-block: 32px;
+      position: relative;
+
+      .nav {
+        &-logo {
+          color: $white;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 130%;
+          /* 26px */
+          text-transform: uppercase;
+        }
+
+        &-menu {
+          @include responsive(xl) {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            padding-inline: 50px;
+            background-color: $black;
+            overflow: hidden;
+            @include flex(column, flex-start, flex-start);
+            gap: 24px;
+            height: 0;
+            transition: all 400ms ease;
+          }
+
+          @include responsive(xl) {
+            gap: 32px;
+          }
+
+          @include responsive(md) {
+            padding-inline: 20px;
+          }
+
+          &.active {
+            height: 100vh;
+            padding-block: 40px;
+
+            .nav-menu-items {
+              opacity: 1;
+            }
+
+            .wrap-button {
+              opacity: 1;
+            }
+          }
+
+          &-items {
+            @include flex(row, center, space-between);
+            gap: 24px;
+
+            @include responsive(xl) {
+              @include flex(column, flex-start, flex-start);
+              gap: 32px;
+              opacity: 0;
+              transition: all 300ms ease;
+            }
+
+            .nav-link {
+              &:hover {
+                color: $primary;
+              }
+            }
+          }
+
+          .wrap-button {
+            @include responsive(lg) {
+              width: 100%;
+            }
+          }
+        }
+
+        .wrap-button {
+          @include responsive(xl) {
+            opacity: 0;
+            transition: all 300ms ease;
+          }
+        }
+
+        &-btn-responsive {
+          display: none;
+          background-image: url("../../../assets/image/menu.svg");
+          background-repeat: no-repeat;
+          background-size: 24px 24px;
+          width: 24px;
+          height: 24px;
+          border: transparent;
+          background-color: transparent;
+
+          @include responsive(xl) {
+            display: block;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}
+
+.desktop {
+  display: block;
+
+  @include responsive(xl) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @include responsive(xl) {
+    display: block;
+  }
+}
+
+.cross {
+  background-image: url("../../../assets/image/cross.svg") !important;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  width: 24px;
+  height: 24px;
+}

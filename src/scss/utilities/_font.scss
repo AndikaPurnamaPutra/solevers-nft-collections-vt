@@ -1,0 +1,150 @@
+// Font Family
+$font-display: 'Panchang',
+  sans-serif;
+$font-desc: 'Poppins',
+  sans-serif;
+
+body {
+  font-family: $font-desc;
+}
+
+h1 {
+  color: $white;
+  font-family: $font-display;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 104px */
+  text-transform: uppercase;
+
+  @include responsive(xl) {
+    font-size: 64px;
+  }
+
+  @include responsive(lg) {
+    font-size: 54px;
+  }
+
+  @include responsive(sm) {
+    font-size: 32px;
+  }
+}
+
+h2 {
+  color: $black;
+  font-family: $font-display;
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 72.8px */
+  text-transform: uppercase;
+
+  @include responsive(xl) {
+    font-size: 46px;
+  }
+
+  @include responsive(sm) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  color: $white;
+  font-family: $font-display;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 62.4px */
+  text-transform: uppercase;
+
+  @include responsive(xl) {
+    font-size: 34px;
+  }
+
+  @include responsive(sm) {
+    font-size: 26px;
+  }
+}
+
+h4 {
+  color: $black;
+  font-family: $font-display;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 52px */
+  text-transform: uppercase;
+
+  @include responsive(xl) {
+    font-size: 32px;
+  }
+
+  @include responsive(sm) {
+    font-size: 24px;
+  }
+}
+
+h5 {
+  color: $black;
+  font-family: $font-display;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 23.4px */
+  text-transform: uppercase;
+
+  @include responsive(xl) {
+    font-size: 16px;
+  }
+}
+
+h6 {
+  color: $white;
+  font-family: $font-display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  /* 20.8px */
+  text-transform: uppercase;
+}
+
+p {
+  color: $subtext;
+  font-family: $font-desc;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  /* 27px */
+  text-transform: capitalize;
+
+  @include responsive(xl) {
+    font-size: 16px;
+  }
+}
+
+a {
+  color: #B8B8B8;
+  font-family: $font-display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all 300ms ease;
+}
+
+// $fontFamilyInter: "Inter", sans-serif;
+// $fontFamilyGilroy: "Gilroy", sans-serif;
+// $fontFamilies: (
+//     font-sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+//     font-serif: 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif',
+//     font-mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+//     font-inter: '"Inter", sans-serif',
+//     font-gilroy: '"Gilroy", sans-serif'
+// ) !default;

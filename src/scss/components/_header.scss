@@ -1,0 +1,325 @@
+.section-header {
+  .content {
+    &-top {
+      padding-top: 40px;
+      padding-bottom: 152px;
+      position: relative;
+
+      @include responsive(sm) {
+        padding-bottom: 40px;
+      }
+
+      &-left {
+        @include flex(column, flex-start, null);
+        gap: 56px;
+
+        @include responsive(lg) {
+          gap: 32px;
+        }
+
+        .subtext {
+          @include flex(row, center, flex-start);
+          gap: 32px;
+
+          @include responsive(xl) {
+            @include flex(column, flex-start, flex-start);
+          }
+
+          @include responsive(lg) {
+            gap: 24px;
+          }
+
+          @include responsive(sm) {
+            flex-direction: column-reverse;
+          }
+
+          &-display {
+            max-width: 1058px;
+
+            @include responsive(xl) {
+              max-width: 794px;
+            }
+          }
+
+          &-text {
+            @include flex(column, flex-start, null);
+            gap: 16px;
+
+            .wrapper {
+              @include flex(row, center, null);
+              gap: 16px;
+
+              &-profile {
+                @include flex(row, center, null);
+
+                img {
+                  max-width: 40px;
+                  margin-inline: -6px;
+
+                  &:nth-child(2) {
+                    position: relative;
+                    z-index: 1;
+                  }
+                }
+              }
+            }
+
+            .desc {
+              max-width: 343px;
+              color: $gray;
+            }
+          }
+        }
+      }
+
+      &-right {
+        position: absolute;
+        top: 36px;
+        right: 86px;
+        z-index: 1;
+
+        @include responsive(xl) {
+          top: 54px;
+          right: 0;
+        }
+
+        @include responsive(lg) {
+          display: none;
+        }
+
+        .wrap-image {
+          img {
+            max-width: 770.98px;
+
+            @include responsive(xl) {
+              max-width: 650px;
+            }
+          }
+        }
+
+        .img-decoration-circle {
+          max-width: 150px;
+          position: absolute;
+          bottom: 202px;
+          right: 40px;
+          animation: rotate-animation 8s infinite linear;
+
+          @keyframes rotate-animation {
+            0% {
+              transform: rotate(0deg);
+            }
+
+            100% {
+              transform: rotate(360deg);
+            }
+          }
+
+          @include responsive(xl) {
+            max-width: 105px;
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      background-color: $white;
+      @include flex(column, null, null);
+      gap: 120px;
+      padding-bottom: 88px;
+
+      @include responsive(sm) {
+        gap: 42px;
+      }
+
+      .wrapper {
+        @include flex(column, null, null);
+        position: relative;
+        gap: 120px;
+
+        @include responsive(sm) {
+          gap: 32px;
+        }
+
+        .img-decoration {
+          position: absolute;
+          top: 47px;
+          right: -64px;
+          max-width: 567px;
+          z-index: 0;
+
+          @include responsive(xl) {
+            max-width: 440px;
+          }
+
+          @include responsive(sm) {
+            display: none;
+          }
+        }
+
+        .nav-header {
+          @include flex(row, center, flex-start);
+          gap: 104px;
+          padding: 56px 102px;
+          border-radius: 16px 0px 0px 16px;
+          background: $white;
+          position: absolute;
+          top: -82px;
+          width: 100%;
+
+          @include responsive(xl) {
+            padding: 30px 50px;
+            top: -68px;
+          }
+
+          @include responsive(sm) {
+            position: relative;
+            top: 0;
+            padding: 24px 0;
+            @include flex(column, flex-start, flex-start);
+            gap: 16px;
+          }
+        }
+
+        .subtext-text {
+          margin-top: 197px;
+          @include flex(row, center, space-between);
+
+          @include responsive(lg) {
+            @include flex(column, flex-start, space-between);
+            gap: 32px;
+          }
+
+          @include responsive(sm) {
+            margin-top: 0;
+          }
+
+          &-left {
+            @include flex(column, flex-start, null);
+            gap: 24px;
+
+            @include responsive(sm) {
+              gap: 16px;
+            }
+
+            .display {
+              max-width: 612px;
+            }
+
+            .desc {
+              max-width: 505px;
+            }
+          }
+
+          &-right {
+            @include flex(column, flex-start, null);
+            gap: 32px;
+
+            .wrapper {
+              @include flex(column, flex-start, null);
+              gap: 16px;
+
+              .desc {
+                max-width: 486px;
+              }
+            }
+          }
+        }
+      }
+
+      .wrapper-slider {
+        @include flex(column, null, null);
+        gap: 32px;
+
+        .sliders {
+          @include flex(row, null, null);
+          gap: 32px;
+
+          .slick-track {
+            @include flex(row, null, null);
+            gap: 32px;
+          }
+
+          .slide {
+            @include flex(column, null, null);
+            position: relative;
+            box-shadow: 0px 24px 56px 0px rgba(73, 66, 66, 0.54);
+            max-width: 402px;
+            cursor: pointer;
+            overflow: hidden;
+
+            @include responsive(xl) {
+              max-width: 380px;
+            }
+
+            @include responsive(sm) {
+              max-width: 375px;
+            }
+
+            &:hover {
+              .wrap {
+                opacity: 1;
+              }
+            }
+
+            .wrap {
+              position: absolute;
+              bottom: 8px;
+              right: 67.5px;
+              opacity: 0;
+              transition: all 300ms ease;
+
+              .btn-primary {
+                max-width: 168px;
+              }
+            }
+          }
+        }
+
+        .sliders-rtl {
+          @include flex(row, null, null);
+          gap: 32px;
+
+          .slick-track {
+            @include flex(row, null, null);
+            gap: 32px;
+          }
+
+          .slide {
+            @include flex(column, null, null);
+            position: relative;
+            box-shadow: 0px 24px 56px 0px rgba(73, 66, 66, 0.54);
+            max-width: 402px;
+            overflow: hidden;
+
+            @include responsive(xl) {
+              max-width: 380px;
+            }
+
+            @include responsive(sm) {
+              max-width: 375px;
+            }
+
+            &:hover {
+              .wrap {
+                opacity: 1;
+              }
+            }
+
+            .wrap {
+              position: absolute;
+              bottom: 8px;
+              right: 67.5px;
+              opacity: 0;
+              transition: all 300ms ease;
+
+              .btn-primary {
+                max-width: 168px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
